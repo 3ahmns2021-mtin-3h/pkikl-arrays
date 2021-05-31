@@ -35,6 +35,11 @@ public class PractiseArrays : MonoBehaviour
         Debug.Log("Das letzte Element von arrayColoredImagesRed hat den Wert:" + arrayColoredImagesRed[arrayColoredImagesRed.Length - 1].name);
 
         PrintElements(array4);
+
+        foreach(GameObject elem in arrayColoredImagesRed)
+        {
+            Debug.Log(elem.name);
+        }
     }
 
     // Update is called once per frame

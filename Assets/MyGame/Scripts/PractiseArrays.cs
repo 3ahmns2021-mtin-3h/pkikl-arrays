@@ -34,12 +34,19 @@ public class PractiseArrays : MonoBehaviour
         Debug.Log("Das letzte Element von array4 hat den Wert: " + array4[array4.Length - 1]);
         Debug.Log("Das letzte Element von arrayColoredImagesRed hat den Wert:" + arrayColoredImagesRed[arrayColoredImagesRed.Length - 1].name);
 
+        PrintElementsInt(array1);
+        PrintElementsInt(array2);
+        PrintElementsInt(array3);
         PrintElements(array4);
+        PrintOneLiner(array2);
 
-        foreach(GameObject elem in arrayColoredImagesRed)
+        foreach (GameObject elem in arrayColoredImagesRed)
         {
             Debug.Log(elem.name);
         }
+
+
+
     }
 
     // Update is called once per frame
@@ -54,6 +61,25 @@ public class PractiseArrays : MonoBehaviour
         {
             Debug.Log("Element Nummer " + i + "hat den Wert: " + stringArray[i]);
         }
+    }
+
+    public void PrintElementsInt(int[] intArray)
+    {
+        for (int i = 0; i < intArray.Length; i++)
+        {
+            Debug.Log("Element Nummer " + i + "hat den Wert: " + intArray[i]);
+        }
+    }
+
+    void PrintOneLiner(int[] x)
+    {
+        string tmp = "";
+        for (int i = 0; i < x.Length; i++)
+        {
+            tmp += x[i] + " ";
+        }
+
+        Debug.Log(tmp);
     }
 
 }
